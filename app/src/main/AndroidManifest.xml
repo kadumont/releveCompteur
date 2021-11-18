@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetReleveCompteur">
         <activity
+            android:name=".ConnectionFinal"
+            android:exported="false" />
+        <activity
             android:name=".ControleurListeCompteur"
             android:exported="false" />
         <activity
