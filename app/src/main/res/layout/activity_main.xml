@@ -1,41 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_gravity="bottom"
-    android:padding="10px">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
 
     <EditText
-        android:id="@+id/identifiant"
-        android:layout_width="fill_parent"
+        android:id="@+id/idUtilisateur"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:drawable/editbox_background"
-        android:hint="Identifiant" />
+        android:hint="Identifiant"
+      />
 
     <EditText
         android:id="@+id/mdp"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/identifiant"
         android:background="@android:drawable/editbox_background"
-        android:hint="Mot de passe" />
+        android:hint="Mot de passe"
+        android:autofillHints="password" />
 
     <Button
         android:id="@+id/login"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mdp"
-        android:layout_marginTop="-1dp"
         android:text="Connexion"
         android:visibility="visible" />
 
     <TextView
-        android:id="@+id/label"
-        android:layout_width="fill_parent"
+        android:id="@+id/labelNomEnt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login"
         android:text="JCDL"
         android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/labelVersionSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal=""
+        android:text="v 0.0.1"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnfiche"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/btnliste"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:visibility="visible" />
 </LinearLayout>
