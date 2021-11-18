@@ -9,6 +9,6 @@ public class ControleurListeCompteur extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_controleur_liste_compteur);
+        setContentView(R.layout.layout_liste_compteur);
     }
 }
