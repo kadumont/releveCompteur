@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:padding="10px">
+
+    <EditText
+        android:id="@+id/identifiant"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Identifiant" />
+
+    <EditText
+        android:id="@+id/mdp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/identifiant"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Mot de passe" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mdp"
+        android:layout_marginTop="-1dp"
+        android:text="Connexion"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:text="JCDL"
+        android:textColor="#000000" />
+</LinearLayout>
