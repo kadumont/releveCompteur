@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Project/ProjetReleveCompteur/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_connection_final.xml" value="0.33" />
         <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_controleur_fiche_compteur.xml" value="0.1734375" />
         <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_controleur_liste_compteur.xml" value="0.1734375" />
         <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/layout_liste_compteur.xml" value="0.1734375" />
+        <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/list_item_compteur.xml" value="0.1734375" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_connection_final.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/layout_liste_compteur.xml" value="0.12708333333333333" />
