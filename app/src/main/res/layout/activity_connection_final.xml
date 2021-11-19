@@ -7,18 +7,22 @@
     android:padding="10dp"
     >
 
-    <EditText
+    <TextView
         android:id="@+id/idUtilisateur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="3pt"
+        android:layout_marginBottom="3pt"
         android:background="@android:drawable/editbox_background"
         android:hint="Identifiant"
-        />
+        android:text=""/>
 
     <EditText
         android:id="@+id/mdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="3pt"
+        android:layout_marginBottom="3pt"
         android:background="@android:drawable/editbox_background"
         android:hint="Mot de passe"
         android:autofillHints="password" />
@@ -27,8 +31,10 @@
         android:id="@+id/login"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Connexion"
         android:visibility="visible" />
+
 
     <TextView
         android:id="@+id/labelNomEnt"
@@ -44,16 +50,5 @@
         android:text="v 0.0.1"
         android:textColor="#000000" />
 
-    <Button
-        android:id="@+id/btnfiche"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Connexion"
-        android:visibility="visible" />
-    <Button
-        android:id="@+id/btnliste"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Connexion"
-        android:visibility="visible" />
+
 </LinearLayout>
