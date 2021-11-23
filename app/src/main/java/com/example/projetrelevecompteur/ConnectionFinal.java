@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import plum.widget.ComboDialog;
 
-public class ConnectionFinal extends AppCompatActivity {
+public class ConnectionFinal extends AppCompatActivity implements  ComboDialog.OnClickComboDialogListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
