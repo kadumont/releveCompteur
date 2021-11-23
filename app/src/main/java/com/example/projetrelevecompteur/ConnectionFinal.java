@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 import plum.widget.ComboDialog;
 
-public class ConnectionFinal extends AppCompatActivity implements  ComboDialog.OnClickComboDialogListener{
+public abstract class ConnectionFinal extends AppCompatActivity implements ComboDialog.OnClickComboDialogListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,17 +19,25 @@ public class ConnectionFinal extends AppCompatActivity implements  ComboDialog.O
 
     TextView myTextViewItem = (TextView)findViewById( R.id.idUtilisateur );
 
-    final CharSequence[] items = {"Rouge","Vert","Bleu"};
-    final CharSequence[] values = {"1","2","3"};
+    ArrayList<Releveur> listeReleveur = new ArrayList();
 
-    ComboDialog comboCouleur = new ComboDialog( "Choisir une couleur",
-            items,
-            values,
+
+    final CharSequence[] itemsId = {"Rouge","Vert","Bleu"}; //identifiant
+    final CharSequence[] valuesMotDePasse = {"1","2","3"}; //mot de passe
+
+    for(int i = 0, listeReleveurw ){
+
+    }
+
+
+    ComboDialog comboCouleur = new ComboDialog( "Choisir un identifiant",
+            itemsId,
+            itemsId,
             myTextViewItem,
             this );
 
     //Mise en place d'un écouteur sur ComboDialog
-        comboCouleur.setOnClickComboDialogListener(this);
+    comboCouleur.setOnClickComboDialogListener(this);
 
 
 
