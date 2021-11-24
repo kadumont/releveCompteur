@@ -10,17 +10,16 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:orientation="vertical"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtNom"
+            android:layout_width="139dp"
             android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:textColor="#000000"
             android:paddingLeft="30dp"
-            android:textStyle="bold"
-            android:text="" />
+            android:text=""
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtRue"
