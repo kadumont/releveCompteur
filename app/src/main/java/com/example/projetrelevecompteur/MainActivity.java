@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     //Btn Connexion
     public void envoyerConnexion (View view) {
         Intent intent = new Intent(this,ConnectionFinal.class);
-
         startActivity(intent);
     }
 
