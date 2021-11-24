@@ -21,5 +21,8 @@ public class ControleurListeCompteur extends AppCompatActivity {
 
         CompteurArrayAdapter arrayAdapterCompteur =
                 new CompteurArrayAdapter(this, lesCompteurs);
+
+        lv = (ListView) findViewById(R.id.list);
+        lv.setAdapter(arrayAdapterCompteur );
     }
 }
