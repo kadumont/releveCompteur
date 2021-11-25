@@ -1,6 +1,7 @@
 package com.example.projetrelevecompteur;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,20 +27,34 @@ public class CompteurArrayAdapter extends ArrayAdapter<Compteur> {
                     false);
         }
 
-        TextView txtNom = (TextView) convertView.findViewById(R.id.txtNom);
-        TextView txtRue = (TextView) convertView.findViewById(R.id.txtRue);
-        TextView txtCodePostal = (TextView) convertView.findViewById(R.id.txtCodePostal);
-        TextView txtVille = (TextView) convertView.findViewById(R.id.txtVille);
-        TextView txtIndexAncien = (TextView) convertView.findViewById(R.id.txtIndexAncien);
-        TextView txtIndexNouveau = (TextView) convertView.findViewById(R.id.txtIndexNouveau);
-        TextView txtNomReleveur = (TextView) convertView.findViewById(R.id.txtNomReleveur);
-        txtNom.setText(compteur.nom);
+
+            TextView txtNom = (TextView) convertView.findViewById(R.id.txtNom);
+            TextView txtRue = (TextView) convertView.findViewById(R.id.txtRue);
+            TextView txtCodePostal = (TextView) convertView.findViewById(R.id.txtCodePostal);
+            TextView txtVille = (TextView) convertView.findViewById(R.id.txtVille);
+            TextView txtIndexAncien = (TextView) convertView.findViewById(R.id.txtIndexAncien);
+            TextView txtIndexNouveau = (TextView) convertView.findViewById(R.id.txtIndexNouveau);
+            TextView txtNomReleveur = (TextView) convertView.findViewById(R.id.txtNomReleveur);
+
+            txtNom.setText(compteur.nom);
         txtRue.setText(compteur.rue);
         txtCodePostal.setText(compteur.codePostal);
         txtVille.setText(compteur.ville);
-        txtIndexAncien.setText(compteur.indexAncien+"");
-        txtIndexNouveau.setText(compteur.indexNouveau+"");
+        txtIndexAncien.setText(compteur.indexAncien + "");
+        txtIndexNouveau.setText(compteur.indexNouveau + "");
         txtNomReleveur.setText(compteur.nomReleveur);
+
+        if(compteur.indexNouveau==0) {
+
+            txtNom.setTypeface(null, Typeface.BOLD);
+
+            txtRue.setTypeface(null, Typeface.BOLD);
+
+            txtCodePostal.setTypeface(null, Typeface.BOLD);
+
+            txtVille.setTypeface(null, Typeface.BOLD);
+
+        }
 
         return convertView;
     }
