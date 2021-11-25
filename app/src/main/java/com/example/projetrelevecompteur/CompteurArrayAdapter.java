@@ -26,14 +26,21 @@ public class CompteurArrayAdapter extends ArrayAdapter<Compteur> {
                     false);
         }
 
-        // Lookup view for data population
         TextView txtNom = (TextView) convertView.findViewById(R.id.txtNom);
-
-
-        // Populate the data into the template view using the data object
+        TextView txtRue = (TextView) convertView.findViewById(R.id.txtRue);
+        TextView txtCodePostal = (TextView) convertView.findViewById(R.id.txtCodePostal);
+        TextView txtVille = (TextView) convertView.findViewById(R.id.txtVille);
+        TextView txtIndexAncien = (TextView) convertView.findViewById(R.id.txtIndexAncien);
+        TextView txtIndexNouveau = (TextView) convertView.findViewById(R.id.txtIndexNouveau);
+        TextView txtNomReleveur = (TextView) convertView.findViewById(R.id.txtNomReleveur);
         txtNom.setText(compteur.nom);
+        txtRue.setText(compteur.rue);
+        txtCodePostal.setText(compteur.codePostal);
+        txtVille.setText(compteur.ville);
+        txtIndexAncien.setText(compteur.indexAncien);
+        txtIndexNouveau.setText(compteur.indexNouveau);
+        txtNomReleveur.setText(compteur.nomReleveur);
 
-        // Return the completed view to render on screen
         return convertView;
     }
 }

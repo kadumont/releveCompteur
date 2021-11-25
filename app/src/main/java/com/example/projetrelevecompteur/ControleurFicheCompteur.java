@@ -10,5 +10,10 @@ public class ControleurFicheCompteur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_controleur_fiche_compteur);
+
+        CompteurSQLLite cbd = new CompteurSQLLite;
+        Compteur c = cbd.getListeCompteur().get(0);
+
+
     }
 }
