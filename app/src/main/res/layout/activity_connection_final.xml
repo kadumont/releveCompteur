@@ -13,9 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingVertical="3pt"
         android:layout_marginBottom="3pt"
-        android:background="@android:drawable/editbox_background"
-        android:hint="Identifiant"
-        android:text=""/>
+        android:hint="Identifiant"/>
 
     <EditText
         android:id="@+id/mdp"
@@ -23,9 +21,8 @@
         android:layout_height="wrap_content"
         android:paddingVertical="3pt"
         android:layout_marginBottom="3pt"
-        android:background="@android:drawable/editbox_background"
-        android:hint="Mot de passe"
-        android:autofillHints="password" />
+        android:inputType="textPassword"
+        android:hint="Mot de passe"/>
 
     <Button
         android:id="@+id/login"
