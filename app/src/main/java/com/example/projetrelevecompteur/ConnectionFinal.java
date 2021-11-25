@@ -2,6 +2,7 @@ package com.example.projetrelevecompteur;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -51,7 +52,6 @@ public class ConnectionFinal extends AppCompatActivity
     }
 
 
-
     // Le choix dans ComboDialog déclenche un clic
     public void onClickComboDialog( ComboDialog comboDialog )
     {
@@ -59,6 +59,7 @@ public class ConnectionFinal extends AppCompatActivity
         valueMotDePasse = (String) comboDialog.value( comboDialog.getIndexSelected());
 
     }
+
 
     @Override
     public void onClick(View v) {
@@ -70,10 +71,14 @@ public class ConnectionFinal extends AppCompatActivity
                     "Connexion réussie ! ",
                     Toast.LENGTH_LONG);
             toast.show();
+
             //StartActivity sur Liste
+            Intent intent = new Intent(this,ControleurListeCompteur.class);
+            startActivity(intent);
+
         }else {
             Toast toast = Toast.makeText(getApplicationContext(),
-                    "Mot de passe incorrect ! ",
+                    "Information incorrect ! ",
                     Toast.LENGTH_LONG);
             toast.show();
         }
