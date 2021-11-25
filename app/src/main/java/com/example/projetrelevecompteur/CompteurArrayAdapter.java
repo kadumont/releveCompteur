@@ -21,7 +21,7 @@ public class CompteurArrayAdapter extends ArrayAdapter<Compteur> {
 
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout_liste_compteur,
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_compteur,
                     parent,
                     false);
         }
@@ -37,8 +37,8 @@ public class CompteurArrayAdapter extends ArrayAdapter<Compteur> {
         txtRue.setText(compteur.rue);
         txtCodePostal.setText(compteur.codePostal);
         txtVille.setText(compteur.ville);
-        txtIndexAncien.setText(compteur.indexAncien);
-        txtIndexNouveau.setText(compteur.indexNouveau);
+        txtIndexAncien.setText(compteur.indexAncien+"");
+        txtIndexNouveau.setText(compteur.indexNouveau+"");
         txtNomReleveur.setText(compteur.nomReleveur);
 
         return convertView;
