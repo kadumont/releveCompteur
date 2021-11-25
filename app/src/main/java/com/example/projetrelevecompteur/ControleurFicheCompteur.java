@@ -3,9 +3,12 @@ package com.example.projetrelevecompteur;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-public class ControleurFicheCompteur extends AppCompatActivity {
+public class ControleurFicheCompteur extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +33,23 @@ public class ControleurFicheCompteur extends AppCompatActivity {
         TextView txtAncienIndex=(TextView)findViewById(R.id.txtIndexAncien);
         txtAncienIndex.setText(c.indexAncien + "");
 
-        TextView txtIndexNouveau=(TextView)findViewById(R.id.txtIndexNouveau);
+        EditText txtIndexNouveau=(EditText) findViewById(R.id.txtIndexNouveau);
         txtIndexNouveau.setText(c.indexNouveau + "");
 
         TextView txtNomReleveur=(TextView)findViewById(R.id.txtNomReleveur);
         txtNomReleveur.setText(c.nomReleveur);
+
+        Button modifier=findViewById(R.id.button1);
+        modifier.setOnClickListener(this);
+
+    }
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.button1:
+                
+                break;
+        }
+
 
     }
 }
