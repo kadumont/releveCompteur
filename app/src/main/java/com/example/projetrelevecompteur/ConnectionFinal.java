@@ -15,7 +15,7 @@ import plum.widget.ComboDialog;
 public class ConnectionFinal extends AppCompatActivity
         implements ComboDialog.OnClickComboDialogListener, View.OnClickListener {
 
-    /* */
+    String valueMotDePasse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,21 +56,16 @@ public class ConnectionFinal extends AppCompatActivity
     public void onClickComboDialog( ComboDialog comboDialog )
     {
 
-        String value = (String) comboDialog.value( comboDialog.getIndexSelected());
-        String item = (String) comboDialog.item( comboDialog.getIndexSelected());
+        valueMotDePasse = (String) comboDialog.value( comboDialog.getIndexSelected());
 
-        Toast toast = Toast.makeText(getApplicationContext(),
-                value + ":" + item,
-                Toast.LENGTH_LONG);
-        toast.show();
     }
 
     @Override
     public void onClick(View v) {
-        TextView myTextViewItem = (TextView)findViewById( R.id.idUtilisateur );
+        //TextView myTextViewItem = (TextView)findViewById( R.id.idUtilisateur );
         EditText myEditText = (EditText)findViewById(R.id.mdp);
 
-        if (myEditText.getText().toString().equals(myTextViewItem.getText().toString())){
+        if (myEditText.getText().toString().equals(valueMotDePasse)){
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Connexion réussie ! ",
                     Toast.LENGTH_LONG);
