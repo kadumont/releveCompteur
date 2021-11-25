@@ -15,7 +15,7 @@ import plum.widget.ComboDialog;
 public class ConnectionFinal extends AppCompatActivity
         implements ComboDialog.OnClickComboDialogListener, View.OnClickListener {
 
-
+    /* */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class ConnectionFinal extends AppCompatActivity
         final CharSequence[] itemsId  = new CharSequence[listeReleveur.size()];
         final CharSequence[] valuesMotDePasse = new CharSequence[listeReleveur.size()];
 
-        for(int i = 0; i < listeReleveur.size(); i++ ){
+        for(int i = 0; i < listeReleveur.size() ; i++ ){
             itemsId[i] = listeReleveur.get(i).nomReleveur;
             valuesMotDePasse[i] = listeReleveur.get(i).motDePasse;
         }
