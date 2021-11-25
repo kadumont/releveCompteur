@@ -3,14 +3,19 @@ package com.example.projetrelevecompteur;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import plum.widget.ComboDialog;
 
-public class ConnectionFinal extends AppCompatActivity implements ComboDialog.OnClickComboDialogListener{
+public class ConnectionFinal extends AppCompatActivity
+        implements ComboDialog.OnClickComboDialogListener, View.OnClickListener {
 
+    String valueMotDePasse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,31 +36,46 @@ public class ConnectionFinal extends AppCompatActivity implements ComboDialog.On
         }
 
 
-        ComboDialog comboCouleur = new ComboDialog( "Choisir un identifiant",
+        ComboDialog comboIdentifiant = new ComboDialog( "Choisir un identifiant",
                 itemsId,
                 valuesMotDePasse,
                 myTextViewItem,
                 this );
 
         //Mise en place d'un écouteur sur ComboDialog
-        comboCouleur.setOnClickComboDialogListener(this);
+        comboIdentifiant.setOnClickComboDialogListener(this);
+
+        Button monBouton=(Button) findViewById(R.id.login);
+        monBouton.setOnClickListener(this);
 
     }
-
-
-
 
 
 
     // Le choix dans ComboDialog déclenche un clic
     public void onClickComboDialog( ComboDialog comboDialog )
     {
-        String value = (String) comboDialog.value( comboDialog.getIndexSelected());
-        String item = (String) comboDialog.item( comboDialog.getIndexSelected());
 
-        Toast toast = Toast.makeText(getApplicationContext(),
-                value + ":" + item,
-                Toast.LENGTH_LONG);
-        toast.show();
+        valueMotDePasse = (String) comboDialog.value( comboDialog.getIndexSelected());
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        //TextView myTextViewItem = (TextView)findViewById( R.id.idUtilisateur );
+        EditText myEditText = (EditText)findViewById(R.id.mdp);
+
+        if (myEditText.getText().toString().equals(valueMotDePasse)){
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Connexion réussie ! ",
+                    Toast.LENGTH_LONG);
+            toast.show();
+            //StartActivity sur Liste
+        }else {
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Mot de passe incorrect ! ",
+                    Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 }
