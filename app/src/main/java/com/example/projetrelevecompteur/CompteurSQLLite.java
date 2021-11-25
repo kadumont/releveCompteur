@@ -11,7 +11,7 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
     //--- Base de données
 
     private static String DATABASE_NAME = "compteur.db";
-    private static int DATABASE_VERSION = 1;
+    private static int DATABASE_VERSION = 6;
 
     //--- Table compteur
 
@@ -70,7 +70,7 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
             values.put(COLUMN_VILLE, co.ville);
             values.put(COLUMN_CODE_POSTAL, co.codePostal);
             values.put(COLUMN_INDEX_ANCIEN, co.indexAncien);
-            values.put(COLUMN_INDEX_NOUVEAU, 0);
+            values.put(COLUMN_INDEX_NOUVEAU, co.indexNouveau);
 
             long insertId = db.insert(TABLE_COMPTEUR, null,values);
         }
