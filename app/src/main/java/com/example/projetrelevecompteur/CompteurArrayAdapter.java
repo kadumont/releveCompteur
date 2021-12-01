@@ -37,12 +37,12 @@ public class CompteurArrayAdapter extends ArrayAdapter<Compteur> {
             TextView txtNomReleveur = (TextView) convertView.findViewById(R.id.txtNomReleveur);
 
             txtNom.setText(compteur.nom);
-        txtRue.setText(compteur.rue);
-        txtCodePostal.setText(compteur.codePostal);
-        txtVille.setText(compteur.ville);
-        txtIndexAncien.setText(compteur.indexAncien + "");
-        txtIndexNouveau.setText(compteur.indexNouveau + "");
-        txtNomReleveur.setText(compteur.nomReleveur);
+            txtRue.setText(compteur.rue);
+            txtCodePostal.setText(compteur.codePostal);
+            txtVille.setText(compteur.ville);
+            txtIndexAncien.setText(compteur.indexAncien + "");
+            txtIndexNouveau.setText(compteur.indexNouveau + "");
+            txtNomReleveur.setText(compteur.nomReleveur);
 
         if(compteur.indexNouveau==0) {
 

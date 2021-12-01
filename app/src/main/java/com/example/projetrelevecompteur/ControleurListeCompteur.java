@@ -36,8 +36,12 @@ public class ControleurListeCompteur extends AppCompatActivity implements Adapte
 
     @Override
     public void onItemClick(AdapterView<?> ad, View v, int pos, long id) {
-        // When clicked, show a toast with the TextView text
+        CompteurSQLLite s = new CompteurSQLLite(this);
+        ArrayList<Compteur> lesCompteurs = s.getListeCompteur();
+
         Intent intent = new Intent(this,ControleurFicheCompteur.class);
+        intent.putExtra("pos", pos);
+
         startActivity(intent);
     }
 }
