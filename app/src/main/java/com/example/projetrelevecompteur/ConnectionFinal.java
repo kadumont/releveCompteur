@@ -53,11 +53,8 @@ public class ConnectionFinal extends AppCompatActivity
 
 
     // Le choix dans ComboDialog déclenche un clic
-    public void onClickComboDialog( ComboDialog comboDialog )
-    {
-
+    public void onClickComboDialog( ComboDialog comboDialog ) {
         valueMotDePasse = (String) comboDialog.value( comboDialog.getIndexSelected());
-
     }
 
 

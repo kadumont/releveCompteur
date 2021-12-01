@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,74 +8,82 @@
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
         android:orientation="vertical"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         tools:ignore="MissingConstraints">
-    <TextView
-        android:id="@+id/txtNom"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text="oo"
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:id="@+id/txtRue"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text=""
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:id="@+id/txtCodePostal"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text=""
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:id="@+id/txtVille"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text=""
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:id="@+id/txtIndexAncien"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text=""
-        tools:ignore="MissingConstraints" />
-    <EditText
-        android:id="@+id/txtIndexNouveau"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text=""
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:id="@+id/txtNomReleveur"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:textColor="#000000"
-        android:paddingLeft="30dp"
-        android:textStyle="bold"
-        android:text=""
-        tools:ignore="MissingConstraints" />
-        <Button android:id="@+id/button1"
+
+        <TextView
+            android:id="@+id/txtNom"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/txtRue"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/txtCodePostal"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/txtVille"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/txtIndexAncien"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/txtIndexNouveau"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/txtNomReleveur"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="#000000"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modifier"/>
+            android:text="Modifier" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annuler" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

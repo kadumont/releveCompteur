@@ -10,13 +10,16 @@ import android.widget.TextView;
 
 public class ControleurFicheCompteur extends AppCompatActivity implements View.OnClickListener {
 
+    CompteurSQLLite cbd ;
+    Compteur c;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_controleur_fiche_compteur);
 
-        CompteurSQLLite cbd = new CompteurSQLLite(this);
-        Compteur c = cbd.getListeCompteur().get(0);
+        cbd = new CompteurSQLLite(this);
+        c = cbd.getListeCompteur().get(0);
 
         TextView txtNom=(TextView)findViewById(R.id.txtNom);
         txtNom.setText(c.nom);
@@ -39,14 +42,20 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
         TextView txtNomReleveur=(TextView)findViewById(R.id.txtNomReleveur);
         txtNomReleveur.setText(c.nomReleveur);
 
-        Button modifier=findViewById(R.id.button1);
-        modifier.setOnClickListener(this);
+        Button valider=findViewById(R.id.button1);
+        Button annuler = findViewById(R.id.button2);
+        valider.setOnClickListener(this);
+        annuler.setOnClickListener(this);
 
     }
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.button1:
-                
+
+                EditText txtIndexNouveau=(EditText) findViewById(R.id.txtIndexNouveau);
+                c.indexNouveau= Integer.parseInt(txtIndexNouveau.getText().toString());
+
+
                 break;
         }
 
