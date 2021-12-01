@@ -19,7 +19,8 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_controleur_fiche_compteur);
 
         cbd = new CompteurSQLLite(this);
-        c = cbd.getListeCompteur().get(0);
+        int pos = getIntent().getIntExtra("pos",-1);
+        c = cbd.getListeCompteur().get(pos);
 
         TextView txtNom=(TextView)findViewById(R.id.txtNom);
         txtNom.setText(c.nom);
