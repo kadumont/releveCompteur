@@ -43,7 +43,7 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
         TextView txtNomReleveur=(TextView)findViewById(R.id.txtNomReleveur);
         txtNomReleveur.setText(c.nomReleveur);
 
-        Button valider=findViewById(R.id.button1);
+        Button valider = findViewById(R.id.button1);
         Button annuler = findViewById(R.id.button2);
         valider.setOnClickListener(this);
         annuler.setOnClickListener(this);
