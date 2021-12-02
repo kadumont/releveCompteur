@@ -13,17 +13,19 @@ import java.util.ArrayList;
 
 public class ControleurListeCompteur extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ListView lv;
-
+    Compteur compteur=null;
+    CompteurArrayAdapter arrayAdapterCompteur;
+    CompteurSQLLite s;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_liste_compteur);
 
 
-        CompteurSQLLite s = new CompteurSQLLite(this);
+        s = new CompteurSQLLite(this);
         ArrayList<Compteur> lesCompteurs = s.getListeCompteur();
 
-        CompteurArrayAdapter arrayAdapterCompteur =
+        arrayAdapterCompteur =
                 new CompteurArrayAdapter(this, lesCompteurs);
 
         lv = (ListView) findViewById(R.id.list);
@@ -36,12 +38,21 @@ public class ControleurListeCompteur extends AppCompatActivity implements Adapte
 
     @Override
     public void onItemClick(AdapterView<?> ad, View v, int pos, long id) {
-        CompteurSQLLite s = new CompteurSQLLite(this);
-        ArrayList<Compteur> lesCompteurs = s.getListeCompteur();
-
+        compteur=(Compteur)ad.getItemAtPosition(pos);
         Intent intent = new Intent(this,ControleurFicheCompteur.class);
         intent.putExtra("pos", pos);
 
         startActivity(intent);
+        onRestart();
     }
+
+    public void onRestart() {
+        super.onRestart();
+        compteur.indexNouveau  = s.getNewIndexCompteurById(compteur.id);
+
+        arrayAdapterCompteur.notifyDataSetChanged();
+    }
+
+
+
 }

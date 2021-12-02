@@ -131,6 +131,18 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
         return ar;
     }
 
+    public int getNewIndexCompteurById (int id){
+        String w= "id=" + id;
+        SQLiteDatabase db = this.getWritableDatabase();
+        String columns[]= {COLUMN_INDEX_NOUVEAU};
+
+        Cursor cursor = db.query(TABLE_COMPTEUR, columns ,w,null,null,null,null);
+
+        cursor.moveToFirst();
+
+        return cursor.getInt(cursor.getColumnIndex(COLUMN_INDEX_NOUVEAU));
+    }
+
     /*
      * Génération du jeu d'essai
      */
