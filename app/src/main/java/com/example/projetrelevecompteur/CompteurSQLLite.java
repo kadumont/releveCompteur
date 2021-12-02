@@ -76,6 +76,16 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
         }
     }
 
+    public void updateIndexNouveau(Compteur c){
+        String where = "id = " + c.id;
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_INDEX_NOUVEAU, c.indexNouveau);
+
+        db.update(TABLE_COMPTEUR,
+                values, where, null);
+    }
+
     /*
      * Appelé lorsque la base a besoin d'être modifiée
      * Il suffit de modifier DATABASE_VERSION !

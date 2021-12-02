@@ -55,7 +55,8 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
 
                 EditText txtIndexNouveau=(EditText) findViewById(R.id.txtIndexNouveau);
                 c.indexNouveau= Integer.parseInt(txtIndexNouveau.getText().toString());
-
+                cbd.updateIndexNouveau(c);
+                //rafraichir la liste + finish
 
                 break;
         }
