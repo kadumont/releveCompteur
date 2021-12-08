@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -45,15 +46,11 @@ public class CompteurArrayAdapter extends ArrayAdapter<Compteur> {
             txtNomReleveur.setText(compteur.nomReleveur);
 
         if(compteur.indexNouveau==0) {
-
-            txtNom.setTypeface(null, Typeface.BOLD);
-
-            txtRue.setTypeface(null, Typeface.BOLD);
-
-            txtCodePostal.setTypeface(null, Typeface.BOLD);
-
-            txtVille.setTypeface(null, Typeface.BOLD);
-
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.image);
+            imageView.setImageResource(R.drawable.waited);
+        }else {
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.image);
+            imageView.setImageResource(R.drawable.checked);
         }
 
         return convertView;

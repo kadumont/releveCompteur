@@ -1,6 +1,8 @@
 package com.example.projetrelevecompteur;
 
 import java.util.ArrayList;
+
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -131,6 +133,7 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
         return ar;
     }
 
+    @SuppressLint("Range")
     public int getNewIndexCompteurById (int id){
         String w= "id=" + id;
         SQLiteDatabase db = this.getWritableDatabase();
