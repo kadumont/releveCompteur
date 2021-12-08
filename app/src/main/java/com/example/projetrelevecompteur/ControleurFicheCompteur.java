@@ -9,7 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ControleurFicheCompteur extends AppCompatActivity implements View.OnClickListener {
+import plum.widget.MessageDialog;
+
+public class ControleurFicheCompteur extends AppCompatActivity implements View.OnClickListener,
+        MessageDialog.OnClickMessageDialogListener {
 
     CompteurSQLLite cbd ;
     Compteur c;
@@ -73,7 +76,7 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
                 //nouvel index est inférieur à l'ancien index
                 if (c.indexNouveau <= c.indexAncien){
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "Nouvel index inférieur à l'ancien! ",
+                            "Nouvel index inférieur ou égale  à l'ancien! ",
                             Toast.LENGTH_LONG);
                     toast.show();
                     verifContrainte = false;
@@ -93,10 +96,23 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
 
             case R.id.button2:
 
-                finish();
+                MessageDialog.show(this,
+                        "Souhaitez-vous annuler?",
+                        "OUI","NON", this);
                 break;
         }
 
 
+    }
+
+    @Override
+    public void onClickMessageDialog(MessageDialog messageDialog, char c) {
+        switch (c) {
+            case 'G':
+                finish();
+                break;
+            case 'D':
+                break;
+        }
     }
 }
