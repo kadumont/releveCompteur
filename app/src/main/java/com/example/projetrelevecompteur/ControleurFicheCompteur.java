@@ -58,6 +58,10 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
                 cbd.updateIndexNouveau(c);
                 finish();
                 break;
+            case R.id.button2:
+
+                finish();
+                break;
         }
 
 
