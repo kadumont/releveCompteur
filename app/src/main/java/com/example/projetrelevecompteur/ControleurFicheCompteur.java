@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ControleurFicheCompteur extends AppCompatActivity implements View.OnClickListener {
 
@@ -54,10 +55,42 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
             case R.id.button1:
 
                 EditText txtIndexNouveau=(EditText) findViewById(R.id.txtIndexNouveau);
+                //Pour eviter la MAJ de la table compteur de la BDD
+                boolean verifContrainte = true;
+
+                // nouvel index reste vide
+                if (txtIndexNouveau.getText().toString().equals("")) {
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Nouvel index vide! ",
+                            Toast.LENGTH_LONG);
+                    toast.show();
+                    verifContrainte = false;
+                    return;
+                }
+
                 c.indexNouveau= Integer.parseInt(txtIndexNouveau.getText().toString());
-                cbd.updateIndexNouveau(c);
-                finish();
+
+                //nouvel index est inférieur à l'ancien index
+                if (c.indexNouveau <= c.indexAncien){
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Nouvel index inférieur à l'ancien! ",
+                            Toast.LENGTH_LONG);
+                    toast.show();
+                    verifContrainte = false;
+                    return;
+                }
+
+
+                if ((c.indexNouveau - c.indexAncien) > 800 || verifContrainte == true){
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Index superieur à 800! ",
+                            Toast.LENGTH_LONG);
+                    toast.show();
+                    cbd.updateIndexNouveau(c);
+                    finish();
+                }
                 break;
+
             case R.id.button2:
 
                 finish();
