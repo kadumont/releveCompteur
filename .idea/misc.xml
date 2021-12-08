@@ -11,12 +11,17 @@
         <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/layout_liste_compteur.xml" value="0.1734375" />
         <entry key="..\:/Android Project/ProjetReleveCompteur_equipe4/app/src/main/res/layout/list_item_compteur.xml" value="0.1734375" />
         <entry key="..\:/Android Studio projet dossier/Projet4/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_controleur_fiche_compteur.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/drawable/back.xml" value="0.44814814814814813" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/drawable/checked.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/drawable/ic_logo.xml" value="0.346875" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/drawable/layout_bg.xml" value="0.346875" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/drawable/logo.xml" value="0.346875" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/drawable/waited.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_connection_final.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/layout_liste_compteur.xml" value="0.12708333333333333" />
-        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/list_item_compteur.xml" value="0.264" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/layout_liste_compteur.xml" value="0.5687061183550652" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/list_item_compteur.xml" value="0.5" />
+        <entry key="..\:/Users/Jerem/AndroidStudioProjects/ProjetReleveCompteur_equipe4/app/src/main/res/layout/toolbar.xml" value="0.24956331877729257" />
       </map>
     </option>
   </component>
@@ -25,5 +30,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.24956331877729257" />
+      </ProjectState>
+    </option>
   </component>
 </project>

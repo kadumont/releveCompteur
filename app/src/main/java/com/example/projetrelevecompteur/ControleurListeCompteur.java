@@ -1,11 +1,13 @@
 package com.example.projetrelevecompteur;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,7 +22,6 @@ public class ControleurListeCompteur extends AppCompatActivity implements Adapte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_liste_compteur);
-
 
         s = new CompteurSQLLite(this);
         ArrayList<Compteur> lesCompteurs = s.getListeCompteur();
@@ -53,6 +54,12 @@ public class ControleurListeCompteur extends AppCompatActivity implements Adapte
         arrayAdapterCompteur.notifyDataSetChanged();
     }
 
+    public void finnish(){
+     finish();
+    }
 
-
+    public void envoyerConnexion (View view) {
+        Intent intent = new Intent(this,ConnectionFinal.class);
+        startActivity(intent);
+    }
 }
