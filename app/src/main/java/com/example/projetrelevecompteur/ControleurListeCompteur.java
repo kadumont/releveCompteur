@@ -106,7 +106,6 @@ public class ControleurListeCompteur extends AppCompatActivity
     }
 
     public void envoyerConnexion (View view) {
-        Intent intent = new Intent(this,ConnectionFinal.class);
-        startActivity(intent);
+        finish();
     }
 }

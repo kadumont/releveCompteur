@@ -10,16 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetReleveCompteur">
         <activity
-            android:name=".ConnectionFinal"
-            android:exported="false" />
-        <activity
             android:name=".ControleurListeCompteur"
             android:exported="false" />
         <activity
             android:name=".ControleurFicheCompteur"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ConnectionFinal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
