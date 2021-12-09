@@ -101,6 +101,7 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
     /*
      * retourne un ArraList contenant les données de la table compteur
      */
+    @SuppressLint("Range")
     public ArrayList <Compteur> getListeCompteur(){
         ArrayList<Compteur> ar = new ArrayList<Compteur>();
 
@@ -131,6 +132,30 @@ public class CompteurSQLLite extends SQLiteOpenHelper{
         }
 
         return ar;
+    }
+
+    public ArrayList <Compteur> getListeCompteurNonFait(){
+
+        ArrayList<Compteur> ar = getListeCompteur();
+        ArrayList<Compteur> arRes = new ArrayList<>();
+        for(Compteur c : ar){
+            if (c.indexNouveau==0){
+                arRes.add(c);
+            }
+        }
+        return arRes;
+    }
+
+    public ArrayList <Compteur> getListeCompteurFait(){
+
+        ArrayList<Compteur> ar = getListeCompteur();
+        ArrayList<Compteur> arRes = new ArrayList<>();
+        for(Compteur c : ar){
+            if (c.indexNouveau > 0){
+                arRes.add(c);
+            }
+        }
+        return arRes;
     }
 
     @SuppressLint("Range")

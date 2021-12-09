@@ -29,6 +29,17 @@
         app:srcCompat="@drawable/back_v2"
         tools:ignore="SpeakableTextPresentCheck" />
 
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries ="@array/defaultValue"
+        style="@android:style/Widget.Spinner"
+        android:layout_margin="16dp"
+        android:padding="16dp">
+    </Spinner>
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"

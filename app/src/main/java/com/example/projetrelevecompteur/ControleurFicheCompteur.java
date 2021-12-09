@@ -84,14 +84,15 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
                 }
 
 
-                if ((c.indexNouveau - c.indexAncien) > 800 || verifContrainte == true){
+                if ((c.indexNouveau - c.indexAncien) > 800 ){
                     Toast toast = Toast.makeText(getApplicationContext(),
                             "Index superieur à 800! ",
                             Toast.LENGTH_LONG);
-                    toast.show();
+                    toast.show();}
+
                     cbd.updateIndexNouveau(c);
                     finish();
-                }
+
                 break;
 
             case R.id.button2:
@@ -101,9 +102,10 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
                         "OUI","NON", this);
                 break;
         }
-
-
     }
+
+
+
 
     @Override
     public void onClickMessageDialog(MessageDialog messageDialog, char c) {

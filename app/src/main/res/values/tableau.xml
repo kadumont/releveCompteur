@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="defaultValue">
+        <item>Tout les clients</item>
+        <item>Client à faire</item>
+        <item>Client fait</item>
+
+    </string-array>
+</resources>
