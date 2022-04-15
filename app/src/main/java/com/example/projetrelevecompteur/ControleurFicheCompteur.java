@@ -58,8 +58,6 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
             case R.id.button1:
 
                 EditText txtIndexNouveau=(EditText) findViewById(R.id.txtIndexNouveau);
-                //Pour eviter la MAJ de la table compteur de la BDD
-                boolean verifContrainte = true;
 
                 // nouvel index reste vide
                 if (txtIndexNouveau.getText().toString().equals("")) {
@@ -67,7 +65,6 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
                             "Nouvel index vide! ",
                             Toast.LENGTH_LONG);
                     toast.show();
-                    verifContrainte = false;
                     return;
                 }
 
@@ -79,7 +76,6 @@ public class ControleurFicheCompteur extends AppCompatActivity implements View.O
                             "Nouvel index inférieur ou égale  à l'ancien! ",
                             Toast.LENGTH_LONG);
                     toast.show();
-                    verifContrainte = false;
                     return;
                 }
 
